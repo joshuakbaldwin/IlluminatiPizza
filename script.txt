@@ -1,0 +1,411 @@
+STATE begin
+	CREATE books
+		FILE:books
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE calendar
+		FILE:calendar
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE ceiling
+		FILE:ceiling
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE computer
+		FILE:computer
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE curtains
+		FILE:curtains
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE keyboard
+		FILE:computer_keyboard
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE corkboard
+		FILE:corkboard
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE desk
+		FILE:desk
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE desk_drawer_1
+		FILE:desk_drawer_1
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE desk_drawer_2
+		FILE:desk_drawer_2
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE desk_drawer_3
+		FILE:desk_drawer_3
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE door
+		FILE:door
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE floor
+		FILE:floor
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE milk
+		FILE:milk
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE photos
+		FILE:misc_photos
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE picture_frame
+		FILE:picture_frame
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE poster
+		FILE:poster
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE phone
+		FILE:phone
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE plane
+		FILE:plane
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE radio
+		FILE:radio
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE shelf
+		FILE:shelf
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE table
+		FILE:table
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE walls
+		FILE:walls
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE TOP DRAWER
+		FILE:top_drawer
+		POS:0,0,0
+		ANGLE:0,0
+	CREATE TOP DRAWER
+		FILE:middle_drawer
+		POS:0,0,0
+		ANGLE:0,0
+	PAUSE 10000
+	CREATE pizza_box
+		FILE:pizza_box_closed
+		POS:0,25,0
+		ANGLE:0,0
+	MOVE pizza_box
+		DIR:0,-25,0
+		ANGLE:0,0
+		TIME:1500
+	PLAYSOUND PizzaBoxSlide1
+	PAUSE 6500
+	MOVE pizza_box
+		DIR:10,-15,50
+		ANGLE:0,0
+		TIME:5000
+	PAUSE 5000
+	MOVE pizza_box
+		DIR:30,-30,0
+		ANGLE:0,0
+		TIME:3000
+	PAUSE 3000
+	MOVE pizza_box
+		DIR:13,-10,-12.5
+		ANGLE:0,0
+		TIME:2000
+	PAUSE 3000
+	INTERACTIVE pizza_box
+		STATE:two
+STATE two
+	DESTROY pizza_box
+	CREATE pizza_box
+		FILE:pizza_box_open
+		POS:0,0,0
+		ANGLE:0,0,0
+	CREATE pizza_slice_1
+		FILE:slice_1
+		POS:0,0,0
+		ANGLE:0,0,0
+	CREATE pizza_slice_2
+		FILE:slice_2
+		POS:0,0,0
+		ANGLE:0,0,0
+	CREATE pizza_slice_3
+		FILE:slice_3
+		POS:0,0,0
+		ANGLE:0,0,0
+	CREATE pizza_slice_4
+		FILE:slice_4
+		POS:0,0,0
+		ANGLE:0,0,0
+	CREATE pizza_slice_5
+		FILE:slice_5
+		POS:0,0,0
+		ANGLE:0,0,0
+	CREATE pizza_slice_6
+		FILE:slice_6
+		POS:0,0,0
+		ANGLE:0,0,0
+	CREATE pizza_slice_7
+		FILE:slice_7
+		POS:0,0,0
+		ANGLE:0,0,0
+	CREATE pizza_slice_8
+		FILE:slice_8
+		POS:0,0,0
+		ANGLE:0,0,0
+	PAUSE 1000
+	INTERACTIVE pizza_slice_6
+		STATE:three
+STATE three
+	DESTROY pizza_slice_6
+	PLAYSOUND Eat2
+	PAUSE 1000
+	INTERACTIVE pizza_slice_7
+		STATE:four
+STATE four
+	DESTROY pizza_slice_7
+	PLAYSOUND Eat2
+	PAUSE 1000
+	INTERACTIVE pizza_slice_8
+		STATE:five
+STATE five
+	DESTROY pizza_slice_8
+	PLAYSOUND Eat2
+	PAUSE 1000
+	INTERACTIVE pizza_slice_1
+		STATE:six
+STATE six
+	DESTROY pizza_slice_1
+	PLAYSOUND Eat1
+	PAUSE 4000
+	INTERACTIVE pizza_slice_2
+		STATE:seven
+STATE seven
+	DESTROY pizza_slice_2
+	PLAYSOUND Eat1
+	PAUSE 4000
+	INTERACTIVE pizza_slice_3
+		STATE:eight
+STATE eight
+	DESTROY pizza_slice_3
+	PLAYSOUND Eat1
+	PAUSE 4000
+	INTERACTIVE pizza_slice_4
+		STATE:nine
+STATE nine
+	DESTROY pizza_slice_4
+	PLAYSOUND Eat2
+	PAUSE 1000
+	INTERACTIVE pizza_slice_5
+		STATE:ten
+STATE ten
+	DESTROY pizza_slice_5
+	RETEXTURE poster
+		FILE:poster_3
+	PLAYSOUND Eat1
+	PAUSE 1000
+	PLAYSOUND Poison1
+	PAUSE 3000
+	CREATE illuminati_slice
+		FILE:illuminati_slice
+		POS:-40,25,55
+		ANGLE:1.57,0,0
+		ORIGIN:0,0,0
+	CREATE antidote
+		FILE:antidote
+		POS:-40,25,55
+		ANGLE:1.57,0,0
+		ORIGIN:0,0,0
+	PAUSE 4000
+	VOLUME 75
+	PAUSE 1000
+	PLAYSOUND VO_IS1
+	PAUSE 35000
+	PLAYSOUND VO_IS2
+	PAUSE 30000
+	CREATE computer_screen
+		FILE:computer_screen
+		POS:0,0,0
+		ANGLE:0,0
+	RETEXTURE computer_screen
+		FILE:computer_screen
+	INTERACTIVE computer
+		STATE:eleven
+	INTERACTIVE phone
+		STATE:twelve
+STATE eleven
+	PLAYVIDEO computer_screen
+		FILE:Food1Project
+	PLAYSOUND Food1Audio
+	PAUSE 80000
+	RETEXTURE computer_screen
+		FILE:computer_screen_2
+	PLAYSOUND VO_IS6
+	PAUSE 7000
+	INTERACTIVE phone
+		STATE:twelve
+STATE twelve
+	RETEXTURE computer_screen
+		FILE:computer_screen_2
+	CREATE paper
+		FILE:papers_1
+		POS:0,0,0
+		ANGLE:0,0
+	RETEXTURE poster
+		FILE:poster_4
+	RETEXTURE calendar
+		FILE:calender_2
+	PLAYSOUND VO_PB1
+	PAUSE 52000
+	PLAYSOUND VO_IS7
+	PAUSE 42000
+	RETEXTURE pizza_box
+		FILE:pizza_box_2
+	RETEXTURE computer_screen
+		FILE:computer_screen
+	INTERACTIVE computer
+		STATE:thirteen
+	INTERACTIVE pizza_box
+		STATE:fourteen
+STATE thirteen
+	PLAYVIDEO computer_screen
+		FILE:Beyonce1
+	PLAYSOUND Beyonce1Audio
+	PAUSE 60000
+	RETEXTURE computer_screen
+		FILE:computer_screen_2
+	PLAYSOUND VO_IS11
+	PAUSE 4000
+	INTERACTIVE pizza_box
+		STATE:fourteen
+STATE fourteen
+	RETEXTURE computer_screen
+		FILE:computer_screen_2
+	RETEXTURE picture_frame
+		FILE:picture_frame_2
+	RETEXTURE poster
+		FILE:poster_5
+	PLAYSOUND VO_IS12
+	PAUSE 34000
+	RETEXTURE computer_screen
+		FILE:computer_screen
+	MOVE desk_drawer_1
+		DIR:-5,0,0
+		ANGLE:0,0
+		TIME:500
+	MOVE top_drawer
+		DIR:-5,0,0
+		ANGLE:0,0
+		TIME:500
+	MOVE desk_drawer_2
+		DIR:-10,0,0
+		ANGLE:0,0
+		TIME:1000
+	MOVE middle_drawer
+		DIR:-10,0,0
+		ANGLE:0,0
+		TIME:1000
+	MOVE desk_drawer_3
+		DIR:-15,0,0
+		ANGLE:0,0
+		TIME:1000
+	PLAYSOUND VO_IS16
+	PAUSE 13000
+	INTERACTIVE computer
+		STATE:fifteen
+	INTERACTIVE desk
+		STATE:sixteen
+STATE fifteen
+	PLAYVIDEO computer_screen
+		FILE:Magic1
+	PLAYSOUND Magic1Audio
+	PAUSE 31000
+	RETEXTURE computer_screen
+		FILE:computer_screen_2
+	INTERACTIVE desk
+		STATE:sixteen
+STATE sixteen
+	RETEXTURE computer_screen
+		FILE:computer_screen_2
+	RETEXTURE photos
+		FILE:misc_photos_2
+	RETEXTURE poster
+		FILE:poster_6
+	RETEXTURE pizza_box
+		FILE:pizza_box_3
+	PLAYSOUND VO_DESK1
+	PAUSE 81000
+	PLAYSOUND VO_IS17
+	PAUSE 15000
+	PAUSE 15000
+	PLAYSOUND VO_IS18
+	PAUSE 19000
+	FADEOUT 1000
+	PAUSE 1000
+	FADEIN 1000
+	PAUSE 1000
+	PLAYSOUND VO_IS19
+	PAUSE 23000
+	INTERACTIVE illuminati_slice
+		STATE:seventeen
+STATE seventeen
+	RETEXTURE poster
+		FILE:poster_7
+	DESTROY illuminati_slice
+	CREATE illuminati_slice
+		FILE:illuminati_slice
+		POS:-40,-20,55
+		ANGLE:4.71,0,0
+		ORIGIN:0,0,0
+	DESTROY antidote
+	CREATE antidote
+		FILE:antidote
+		POS:-40,-20,55
+		ANGLE:4.71,0,0
+		ORIGIN:0,0,0		
+		INTERACTIVE antidote
+		STATE:eighteen
+STATE eighteen
+	RETEXTURE poster
+		FILE:poster_8
+	RETEXTURE pizza_box
+		FILE:pizza_box_4
+	RETEXTURE books
+		FILE:books_2
+	DESTROY illuminati_slice
+	CREATE illuminati_slice
+		FILE:illuminati_slice
+		POS:-40,25,55
+		ANGLE:1.57,0,0
+		ORIGIN:0,0,0
+	DESTROY antidote
+	CREATE antidote
+		FILE:antidote
+		POS:-25,25,45
+		ANGLE:1.57,0,0
+		ORIGIN:0,0,0	
+	PLAYSOUND VO_IS20
+	PAUSE 24000
+	PLAYSOUND Doorknock1
+	PAUSE 3
+	PLAYSOUND VO_IS21
+	PAUSE 22000
+	INTERACTIVE antidote
+		STATE:end
+	INTERACTIVE door
+		STATE:end
+	
+STATE end
+	QUIT
